@@ -31,10 +31,10 @@
         <div class="hero-img">
           <picture>
             <source
-              srcset="./images/hero-desktop.jpg"
-              media="(min-width: 1300px)"
+              srcset="./images/hero-mobile.jpg"
+              media="(max-width: 1300px)"
             />
-            <img src="./images/hero-mobile.jpg" alt="model" />
+            <img src="./images/hero-desktop.jpg" alt="model" />
           </picture>
           <!-- <img
             srcset="
@@ -62,11 +62,12 @@
             placeholder="Email Address"
             class="input"
             onkeyup="check()"
+            name="email"
           />
 
           <img src="./images/icon-error.svg" alt="error" class="error-icon" />
 
-          <button class="submit-button" onclick="test()">
+          <button class="submit-button" onclick="test()" name="submit">
             <svg
               id="arrow"
               xmlns="http://www.w3.org/2000/svg"
