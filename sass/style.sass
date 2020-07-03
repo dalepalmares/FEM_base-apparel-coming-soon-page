@@ -1,0 +1,222 @@
+// Variables
+$desaturatedRed: hsl(0, 36%, 70%)
+$softRed: hsl(0, 93%, 68%)
+$darkGrayishRed: hsl(0, 6%, 24%)
+$transition: all 100ms ease
+
+// Reset
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+// Footer
+footer
+  position: relative
+  bottom: 5px
+  width: 100%
+  .attribution
+    font-size: 11px
+    text-align: center
+
+    & a
+      color: hsl(228, 45%, 44%)
+
+body
+  overflow-x: hidden
+  font-family: 'Josefin Sans', sans-serif
+  height: 800px
+  width: 100vw
+  // display: flex
+  // flex-direction: column
+  // justify-content: center
+  // align-items: center
+
+  .bg
+    position: absolute
+    z-index: -99
+
+  .container
+    width: 100%
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+
+    .header
+      .logo
+        display: flex
+        padding: 2rem
+
+        img
+          width: 100px
+
+      .hero-img
+        img
+          display: block
+
+    .content
+      display: flex
+      flex-direction: column
+      justify-content: flex-end
+      align-items: center
+      text-align: center
+      padding: 4rem 1.8rem 0 1.8rem
+      min-width: 375px
+      max-width: 700px
+
+      h1
+        text-transform: uppercase
+        letter-spacing: 10px
+        line-height: 1.1
+        font-weight: 600
+        font-size: 2.5rem
+        color: $darkGrayishRed
+
+        & span
+          font-weight: 300
+          color: $desaturatedRed
+
+      p
+        font-size: 15px
+        margin-top: 1rem
+        line-height: 1.5
+        color: $desaturatedRed
+
+      .input-container
+        position: relative
+        width: 20rem
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: 1.5rem
+
+        .input
+          width: 95%
+          height: 3rem
+          color: $darkGrayishRed
+          font-weight: 500
+          border: solid 1px $desaturatedRed
+          border-radius: 2rem
+          padding: 0rem 1.3rem
+
+          &:invalid
+            box-shadow: 0 0 3px red
+
+          &:focus
+            outline: none
+
+          &::placeholder
+            color: $desaturatedRed
+
+        .error-icon
+          position: absolute
+          right: 4.5rem
+          width: 20px
+          height: 20px
+          display: none
+
+        .error-message
+          position: absolute
+          left: 1.3rem
+          bottom: -1.5rem
+          font-size: 12px
+          color: $softRed
+          display: none
+
+        .submit-button
+          position: absolute
+          right: 0rem
+          display: flex
+          justify-content: center
+          align-items: center
+          height: 3.2rem
+          width: 4rem
+          border-radius: 2rem
+          border: none
+          background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%))
+          cursor: pointer
+          transition: $transition
+          outline: none
+
+          #arrow
+            transition: $transition
+
+          &:hover
+            box-shadow: 0px 9px 20px #d3abab
+            transform: scale(1.1)
+            background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 80%, 86%))
+
+// Slide animation for the arrow
+.slide
+  animation: slide forwards 500ms
+  animation-timing-function: ease-out
+
+@keyframes slide
+  0%
+    transform: translateX(0%)
+
+  50%
+    transform: translateX(100%)
+
+  100%
+    transform: translateX(0%)
+
+// Media Queries
+@media only screen and (min-width: 1300px)
+  footer
+    width: 50%
+    position: absolute
+
+  body
+    overflow: hidden
+    height: 100vh
+    .container
+      flex-direction: row-reverse
+      justify-content: space-evenly
+
+      .header
+
+        .logo
+          position: absolute
+          top: 1.5rem
+          left: 7.3rem
+
+          img
+            width: 170px
+
+        .hero-img
+          position: absolute
+          top: 0
+          right: 0
+
+      .content
+        text-align: left
+        align-items: flex-start
+        position: absolute
+        left: 7rem
+
+        h1
+          font-size: 4rem
+          letter-spacing: 18px
+
+        p
+          font-size: 17px
+          max-width: 29rem
+
+        .input-container
+          width: 30rem
+          left: -10px
+          margin-top: 2rem
+
+          .input
+            height: 3.5rem
+            font-size: 17px
+
+          .error-icon
+            right: 7rem
+
+          .submit-button
+            width: 6rem
+            height: 3.6rem
