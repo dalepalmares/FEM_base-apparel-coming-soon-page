@@ -1,2 +1,2 @@
-# FEM_base-apparel-coming-soon-page
-Challenge number 3
+# Front End Mentor Coming Soon Page
+FEM Challenge number 3
