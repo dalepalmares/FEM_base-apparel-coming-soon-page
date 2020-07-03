@@ -23,7 +23,7 @@
 
     <!-- Container -->
     <div class="container">
-      <section class="header">
+      <section class="heading">
         <div class="logo">
           <img src="./images/logo.svg" alt="logo" />
         </div>
@@ -36,14 +36,6 @@
             />
             <img src="./images/hero-desktop.jpg" alt="model" />
           </picture>
-          <!-- <img
-            srcset="
-              ./images/hero-mobile.jpg   375w,
-              ./images/hero-desktop.jpg 1440w
-            "
-            src="./images/hero-mobile.jpg"
-            alt="model"
-          /> -->
         </div>
       </section>
 
@@ -62,12 +54,12 @@
             placeholder="Email Address"
             class="input"
             onkeyup="check()"
-            name="email"
+            aria-label="email"
           />
 
           <img src="./images/icon-error.svg" alt="error" class="error-icon" />
 
-          <button class="submit-button" onclick="test()" name="submit">
+          <button class="submit-button" onclick="test()" aria-label="submit">
             <svg
               id="arrow"
               xmlns="http://www.w3.org/2000/svg"
