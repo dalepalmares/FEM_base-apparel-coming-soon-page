@@ -30,3 +30,10 @@ function test() {
     }
   }
 }
+
+function check() {
+  if (email.value.length < 1) {
+    errorMsg.style.display = "none";
+    errorIcon.style.display = "none";
+  }
+}
